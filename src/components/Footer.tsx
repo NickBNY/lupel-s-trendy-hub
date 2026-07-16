@@ -1,4 +1,5 @@
 import { Instagram, Facebook, Twitter } from "lucide-react";
+import logo from "@/assets/lupel/lupel-logo.png";
 
 export const Footer = () => {
   return (
@@ -6,9 +7,7 @@ export const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h4 className="text-2xl font-serif font-bold bg-gradient-luxury bg-clip-text text-transparent mb-4">
-              LUPEL
-            </h4>
+            <img src={logo} alt="Lupel" className="h-10 w-auto mb-4 brightness-0 invert" />
             <p className="text-background/80 text-sm">
               Luxury cosmetics designed in Paris, made in America.
             </p>

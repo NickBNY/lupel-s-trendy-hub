@@ -1,14 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { ShoppingBag, Menu } from "lucide-react";
+import logo from "@/assets/lupel/lupel-logo.png";
 
 export const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center gap-8">
-          <h1 className="text-2xl font-serif font-bold bg-gradient-luxury bg-clip-text text-transparent">
-            LUPEL
-          </h1>
+          <img src={logo} alt="Lupel" className="h-10 w-auto" />
           <nav className="hidden md:flex gap-6">
             <a href="#products" className="text-sm text-foreground hover:text-primary transition-smooth">
               Products

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-cosmetics.jpg";
+import heroImage from "@/assets/lupel/makeup-hero.jpg";
 import lipGloss from "@/assets/lupel/lip-gloss.jpg";
 import blushPalette from "@/assets/lupel/blush-palette.jpg";
 import liquidShimmer from "@/assets/lupel/liquid-shimmer.jpg";

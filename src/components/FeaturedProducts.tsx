@@ -2,23 +2,33 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
 import lipLiner from "@/assets/lupel/lip-liner.jpg";
+import lipLinerAlt from "@/assets/lupel/lip-liner-2.png";
 import blushPalette from "@/assets/lupel/blush-palette.jpg";
+import blushPaletteAlt from "@/assets/lupel/blush-palette-2.png";
 import moistureBlend from "@/assets/lupel/moisture-blend.jpg";
+import moistureBlendAlt from "@/assets/lupel/moisture-blend-2.png";
 import lipGloss from "@/assets/lupel/lip-gloss.jpg";
+import lipGlossAlt from "@/assets/lupel/lip-gloss-2.png";
+import lipGlossShine from "@/assets/lupel/lip-gloss-shine.png";
+import lipGlossShineAlt from "@/assets/lupel/lip-gloss-shine-2.png";
 import liquidShimmer from "@/assets/lupel/liquid-shimmer.jpg";
+import liquidShimmerAlt from "@/assets/lupel/liquid-shimmer-2.png";
 import matteLipStain from "@/assets/lupel/matte-lip-stain.jpg";
+import matteLipStainAlt from "@/assets/lupel/matte-lip-stain-2.png";
 import mensMoisturizer from "@/assets/lupel/mens-moisturizer.jpg";
+import mensMoisturizerAlt from "@/assets/lupel/mens-moisturizer-2.png";
 import plumpingGloss from "@/assets/lupel/plumping-lip-gloss.jpg";
 
 const products = [
-  { name: "Automatic Lip Liner", subtitle: "Precision definition", price: "$24.99", rating: 5, image: lipLiner },
-  { name: "Blush Palette", subtitle: "Radiant color", price: "$34.99", rating: 5, image: blushPalette },
-  { name: "Extreme Moisture Blend", subtitle: "Deep hydration", price: "$29.99", rating: 5, image: moistureBlend },
-  { name: "Lip Gloss", subtitle: "High shine finish", price: "$19.99", rating: 5, image: lipGloss },
-  { name: "Liquid Shimmer", subtitle: "Luminous glow", price: "$27.99", rating: 5, image: liquidShimmer },
-  { name: "Matte Lip Stain", subtitle: "Long-lasting color", price: "$22.99", rating: 5, image: matteLipStain },
-  { name: "Men's Face Moisturizer", subtitle: "Daily hydration", price: "$32.99", rating: 5, image: mensMoisturizer },
-  { name: "Plumping Lip Gloss", subtitle: "Fuller-looking lips", price: "$24.99", rating: 5, image: plumpingGloss },
+  { name: "Automatic Lip Liner", subtitle: "Juliet", price: "$20.00", rating: 5, image: lipLiner, alt: lipLinerAlt },
+  { name: "Blush Palette", subtitle: "Squish", price: "$24.00", rating: 5, image: blushPalette, alt: blushPaletteAlt },
+  { name: "Extreme Moisture Blend", subtitle: "Deep hydration", price: "$23.00", rating: 5, image: moistureBlend, alt: moistureBlendAlt },
+  { name: "Lip Gloss", subtitle: "Seduction", price: "$21.00", rating: 5, image: lipGloss, alt: lipGlossAlt },
+  { name: "Lip Gloss", subtitle: "Shine", price: "$21.00", rating: 5, image: lipGlossShine, alt: lipGlossShineAlt },
+  { name: "Liquid Shimmer", subtitle: "Hottie", price: "$25.00", rating: 5, image: liquidShimmer, alt: liquidShimmerAlt },
+  { name: "Matte Lip Stain", subtitle: "Dusty Pear", price: "$22.00", rating: 5, image: matteLipStain, alt: matteLipStainAlt },
+  { name: "Men's Face Moisturizer", subtitle: "Daily hydration", price: "$50.00", rating: 5, image: mensMoisturizer, alt: mensMoisturizerAlt },
+  { name: "Plumping Lip Gloss", subtitle: "Fuller-looking lips", price: "$29.00", rating: 5, image: plumpingGloss, alt: plumpingGloss },
 ];
 
 export const FeaturedProducts = () => {
@@ -38,17 +48,22 @@ export const FeaturedProducts = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {products.map((product, index) => (
             <Card
               key={index}
               className="group overflow-hidden border-border hover:shadow-elegant transition-all duration-500 hover:-translate-y-2"
             >
-              <div className="aspect-square overflow-hidden bg-luxury-cream">
+              <div className="relative aspect-square overflow-hidden bg-luxury-cream">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 group-hover:opacity-0"
+                />
+                <img
+                  src={product.alt}
+                  alt={`${product.name} alternate view`}
+                  className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700 group-hover:opacity-100 group-hover:scale-105"
                 />
               </div>
               <div className="p-5">
